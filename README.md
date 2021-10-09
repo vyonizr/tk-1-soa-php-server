@@ -1,28 +1,22 @@
-# php-getting-started
+# TK 1 SOA PHP Server
 
-A barebones PHP app that makes use of the [Silex](http://silex.sensiolabs.org/) web framework, which can easily be deployed to Heroku.
+Language: PHP
 
-This application supports the [Getting Started with PHP on Heroku](https://devcenter.heroku.com/articles/getting-started-with-php) article - check it out.
+Database: MySQL (ClearDB)
 
-## Deploying
+Deployed on heroku: https://young-plateau-37479.herokuapp.com/
 
-Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+## Start Locally
 
 ```sh
-$ git clone git@github.com:heroku/php-getting-started.git # or clone your own fork
-$ cd php-getting-started
-$ heroku create
-$ git push heroku main
-$ heroku open
+  git clone https://github.com/vyonizr/tk-1-soa-php-server.git
+  cd tk-1-soa-php-server
+  php -S localhost:8080 -t web
 ```
 
-or
+## Routes
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using PHP on Heroku, see these Dev Center articles:
-
-- [Getting Started with PHP on Heroku](https://devcenter.heroku.com/articles/getting-started-with-php)
-- [PHP on Heroku](https://devcenter.heroku.com/categories/php)
+| Route                 | HTTP | Params | Body | Description                             |
+| --------------------- | ---- | ------ | ---- | --------------------------------------- |
+| `couriers`            | GET  | -      | -    | Get all couriers list                   |
+| `couriers/:courierId` | GET  | -      | -    | Get all shipment options from a courier |
