@@ -13,17 +13,6 @@ $app->register(new Silex\Provider\MonologServiceProvider(), array(
   'monolog.logfile' => 'php://stderr',
 ));
 
-// Register view rendering
-$app->register(new Silex\Provider\TwigServiceProvider(), array(
-    'twig.path' => __DIR__.'/views',
-));
-
-class Response {
-  public function __construct($status, $data) {
-    $this->status = $status;
-    $this->data = $data;
-  }
-}
 
 $app->get('/', function() use($app) {
   $obj = (object) array('status' => 'OK');
